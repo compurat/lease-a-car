@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "19254193-b879-4f55-bf93-36908cc00bc6",
+		"name": "svb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2533258"
+	},
+	"item": [
+		{
+			"name": "add cars",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add interest rates",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"make\": \"Lexus\",\n    \"model\": \"ABC\",\n    \"version\": \"Sport\",\n    \"doors\": 4,\n    \"gross_price\": 55000,\n    \"nett_price\": \"54000\",\n    \"hp\": 177\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cars/add/car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"add",
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add multiple cars",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"make\": \"Lexus\",\n    \"model\": \"XYZ\",\n    \"version\": \"Sport\",\n    \"doors\": 4,\n    \"gross_price\": 44285,\n    \"nett_price\": \"28§§488,66\",\n    \"horsepower\": 177\n  },\n  {\n    \"make\": \"Lexus\",\n    \"model\": \"BCD\",\n    \"version\": \"Executive\",\n    \"doors\": 4,\n    \"gross_price\": 48195,\n    \"nett_price\": \"31159,25\",\n    \"horsepower\": 177\n  },\n  {\n    \"make\": \"Lexus\",\n    \"model\": \"EFG\",\n    \"version\": \"Executive\",\n    \"doors\": 4,\n    \"gross_price\": 51520,\n    \"nett_price\": \"31949,46\",\n    \"horsepower\": 208\n  }]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cars/add/multiple/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"add",
+						"multiple",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify car",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"make\": \"Lexus\",\n    \"model\": \"ABC\",\n    \"version\": \"Sport\",\n    \"doors\": 2,\n    \"gross_price\": 55000,\n    \"nett_price\": \"54000\",\n    \"horsepower\": 177\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cars/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"make\": \"Lexus\",\n    \"model\": \"ABC\",\n    \"version\": \"Sport\",\n    \"doors\": 4,\n    \"grossPrice\": 55000,\n    \"nettPrice\": \"54000\",\n    \"horsepower\": 177\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cars/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find by make",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"make\": \"Lexus\",\n    \"model\": \"ABC\",\n    \"version\": \"Sport\",\n    \"doors\": 4,\n    \"grossPrice\": 55000,\n    \"nettPrice\": \"54000\",\n    \"horsepower\": 177\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cars/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calculate interest rate",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"make\": \"Lexus\",\n    \"model\": \"ABC\",\n    \"version\": \"Sport\",\n    \"doors\": 4,\n    \"grossPrice\": 55000,\n    \"nettPrice\": \"54000\",\n    \"horsepower\": 177\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cars/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"make\": \"Lexus\",\n    \"model\": \"ABC\",\n    \"version\": \"Sport\",\n    \"doors\": 4,\n    \"grossPrice\": 55000,\n    \"nettPrice\": \"54000\",\n    \"horsepower\": 177\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cars/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

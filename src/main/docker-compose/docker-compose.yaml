@@ -1,0 +1,16 @@
+services:
+  data-scrambler-postgres:
+    image: postgres:latest
+    container_name: data-scrambler-postgres
+    ports:
+      - "4321:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: cars
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
+    name: postgres-data
